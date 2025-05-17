@@ -1,0 +1,168 @@
+:root {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #333; /* Dark for readability */
+}
+
+/* Background image */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('/hao-chen-P2uV6qyOqlk-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Dark overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Root container */
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Navbar */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+  color: #f8f8f8;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #2c1c13;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+}
+
+/* Cards, Forms, Containers */
+form,
+.dashboard-content,
+.whiskey-card,
+.container,
+.section {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+  margin-bottom: 2rem;
+  color: #2e2e2e;
+}
+
+/* Inputs */
+input, select {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #6f4e37 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  transition: background-color 0.25s ease-in-out, transform 0.15s ease;
+}
+
+button:hover {
+  background-color: #5a3c2f;
+  transform: translateY(-1px);
+}
+
+button:focus {
+  outline: 2px solid #d1bfa3;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  background-color: #bbb !important;
+  color: #666 !important;
+  cursor: not-allowed;
+}
+
+/* Whiskey List */
+.whiskey-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.whiskey-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: #222;
+}
+
+.whiskey-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-form input {
+  margin-bottom: 0.5rem;
+}
